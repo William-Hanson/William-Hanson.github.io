@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- Okay gamers -->
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>William Hanson</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div id='Menu'>
+<table width="100%">
+	<th><h1>William Hanson</h1></th>
+	</table>
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">All</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="aboutme.html">About Me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="resume.html">Resume</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="ThunkableApp.html">Thunkable App</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" href="PythonGame.html">Python Game</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="storyboard.html">Story Board</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Contact Me</a>
+  </li>
+ </ul>
+	</div>
+
+
+
+
+	<style>
+	body {
+	overflow: hidden;	
+		
+	}
+	  #container {
+	    position:absolute;
+	    top: 100px;
+	    bottom: 0px;
+	    left: 0px;
+	    right:0px;
+	    background:black;
+	  }
+	  #leftpane {
+	    width: 56%;
+	    height: 100%;
+	   /* background: black;*/
+	    float: left;
+	  }
+	  #rightpane {
+	      width: 44%;
+	  height:100%;
+	  /*background:yellow;*/
+	  float: left;
+	  }
+	  #buttons{
+	  	position:absolute;
+	  	bottom: 50px;
+	  	left: 56%;
+	  	right: 0px;
+	  	height:50px;
+	  	/*background: lime;*/
+	  	display:flex;
+	  	align-items:center;
+	  	justify-content: center;
+	  }
+	  .btn{
+	  	margin:40px;
+	  	
+	  }
+	  #storytext{
+		position: absolute;
+		left:56%;
+		right: 0px;
+		top: 40px;
+		bottom: 50px;
+		/*background: blue;*/
+		
+	  }
+	  
+	 
+	 #graphic{
+	 max-height: 100%;
+	 max-width: 100%;
+	 width: 100%;
+	 height: 100%;
+	 }
+	 
+	 #text{
+	 	color:white;
+	 	font-size: 20px;
+	 }
+	</style>
+
+
+</head>
+
+<body>
+ <div id="container">
+ 
+ <div id="leftpane">
+ 	<img id="graphic" src="/Images/tiltedtowersmain.png"/>
+ </div>
+
+
+<div id="rightpane">
+<div id="storytext">
+<p id="text"> this monkey </p>
+</div>
+<div id="buttons">
+<button id="button1" onclick="buttonclick(1)" type="button" class="btn btn-dark">Dark</button>
+<button id="button2" onclick="buttonclick(2)" type="button" class="btn btn-dark">Dark</button>
+<button id="button3" onclick="buttonclick(3)" type="button" class="btn btn-dark">Dark</button>
+<button id="button4" onclick="buttonclick(4)" type="button" class="btn btn-dark">Dark</button>
+</div>
+</div>
+
+
+<script>
+	var graphic = document.getElementById("graphic")
+	var text = document.getElementById("text")
+	var button1 = document.getElementById("button1")
+	var button2 = document.getElementById("button2")
+	var button3 = document.getElementById("button3")
+	var button4 = document.getElementById("button4")
+	var state = "intro"
+	
+	function intro(){
+		text.innerHTML = "You are Pewdiepie, living in a dystopia where T-Series reigns unrestricted. The world fell into utter chaos after T-Series surpassed your subscriber count, and T-Series quickly gained control. You are now located in the last known Bro-Cave in antarctica and receive news that T-Series now has complete domination of every country on earth. You decide it is time to fight T-Series or die trying.  You begin leaving the Bro-Cave, but you are stopped by Dustin Longfries, an elder Bro. He offers you a gauntlet to assist you on your journey. Do you take the gaunlet?"		
+		button1.innerHTML = "Yes"
+		button1.style.display = "block"
+		button2.innerHTML = "No"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/antarctica.jpg"
+	}
+	
+		
+	function journey(){
+		text.innerHTML = "Upon leaving the cave, you spot a hooded figure turned away from you, standing vacantly. Do you approach him?"		
+		button1.innerHTML = "Yes"
+		button1.style.display = "block"
+		button2.innerHTML = "No"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/journey.jpg"
+		
+	}
+	//choice if player refuses gauntlet
+	function alley(){
+		text.innerHTML = "Upon leaving the cave, you spot a hooded figure turned away from you, standing vacantly. Do you approach him?"		
+		button1.innerHTML = "Yes"
+		button1.style.display = "block"
+		button2.innerHTML = "No"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/journey.jpg"		
+		
+	}
+	//game over code
+	function gameover(){
+		text.innerHTML = "You died! Would you like to start over?"		
+		button1.innerHTML = "Yes"
+		button1.style.display = "block"
+		button2.style.display = "none"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/game over.png"	
+			}
+	function frontdeskperson(){
+		text.innerHTML = "You dodged him, and kept on your way. Your journey from the Bro-Cave to Youtube HQ in India lasts a week, facing many difficult geographical obstacles along the way. You finally arrive in the depressing, uniform town and head to the center where the now T-Series ridden Youtube HQ resides. You walk through the front door and make eye contact with the receptionist. He immediately stands up and begins approaching you. You think to yourself; do I risk my life and let him speak or kill him now?"		
+		button1.innerHTML = "Kill him"
+		button1.style.display = "block"
+		button2.innerHTML = "Let him speak"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/ttower.jpg"
+	}
+	function fightbeforetseries(){
+		text.innerHTML = "You raise your fist and drop him with one punch. He crumbles to dust and you begin climbing the stairs. After a long and trivial hike up the stairs, you reach the final, 100th floor. You kick down the door and are greeted by another receptionist. He states that your journey is finished and T-Series will reign superior. He stands and dawns a long blade hidden under the desk. Do you fight him? Or show him mercy and explain that he will ultimately lose his life?"		
+		button1.innerHTML = "Kill him"
+		button1.style.display = "block"
+		button2.innerHTML = "Reason with him"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/frontdeskman.jpg"
+	}
+	function fightwithtseries(){
+		text.innerHTML = "You decide not to reason with him and he attacks you. He jumps from his desk and swings his sword, narrowly missing you. The sword gets stuck in the ground, and while he's distracted you Bro-Fist him and he crumbles.You advance, and push through the T-shaped doors. On the other side of the door waits T-Series himself. He grins manaically, lifting his fist to reveal a gauntlet of his own. 'Your journey ends here.' he says. He walks out from behind the desk and stops, waiting for you to approach him. Do you approach him and throw the first punch?"		
+		button1.innerHTML = "Yes"
+		button1.style.display = "block"
+		button2.innerHTML = "No"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/tseries.jpg"
+	}
+	function secondmove(){
+		text.innerHTML = "You run at him and swing your gauntlet. He leans back and dodges it, however he loses his balance and falls through the desk. He gets back up, and in a blind rage he charges at you. However when falling through the desk, his gauntlet came off. T-Series does not realize this, and runs at you powerless. Do you take off your gauntlet and make it a fair fight, or end it once and for all?"		
+		button1.innerHTML = "Take it off"
+		button1.style.display = "block"
+		button2.innerHTML = "End it"
+		button2.style.display = "block"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/tseries.jpg"
+	}
+		function Youwin(){
+		text.innerHTML = "You win!"
+		button1.style.display = "none"
+		button2.style.display = "none"
+		button3.style.display = "none"
+		button4.style.display = "none"
+		graphic.src="/Images/youwin.jpg"
+	}
+	
+	//start
+	function buttonclick(button){
+		if (state == "intro"){
+		if (button == 1){
+			state = "journey"
+			journey()
+			}
+			else if (button == 2){
+				state="alley"
+				alley()
+		}
+	}
+	//journey
+	else if(state == "journey"){
+	if (button == 1){
+		state = "frontdeskperson"
+		frontdeskperson()
+	}
+	else if (button == 2) {
+		state="frontdeskperson"
+		frontdeskperson()
+	}
+	}
+	//alley
+	else if (state == "alley") {
+	if (button == 1) {
+		state = "gameover"
+		gameover()
+	}
+	else if (button == 2){
+		state="gameover"
+		gameover()
+	}
+	}
+	//frontdeskperson
+	else if (state == "frontdeskperson"){
+	if (button ==1) {
+		state = "fightbeforetseries"
+		fightbeforetseries()
+	}
+	else if (button == 2) {
+		state = "gameover"
+		gameover()
+	}
+	}
+	//fightbeforetseries
+	else if (state == "fightbeforetseries"){
+		if (button == 1) {
+			state = "fightwithtseries"
+			fightwithtseries()
+	}
+	else if (button == 2) {
+		state = "gameover"
+		gameover()
+	}
+	}
+	//fightwithtseries
+	else if (state == "fightwithtseries"){
+		if (button == 1) {
+			state = "secondmove"
+			secondmove()
+		}
+		else if (button == 2){
+		state="gameover"
+		gameover()
+	}
+	}
+	//secondmove
+	else if (state == "secondmove"){
+		if (button == 1) {
+			state = "gameover"
+			gameover()
+	}
+	else if (button == 2){
+		state = "Youwin"
+		Youwin()
+	}
+	}
+	else if (state == "gameover"){
+		if (button == 1) {
+			state = "intro"
+			intro()
+	}
+	}
+	}
+		intro()
+		
+</script>
+
+</body>
+
+
+
+
+<div>
+<footer>
+	<p class="float-right">
+	  		<a href="https://mail.google.com/mail/u/0/#inbox?compose=new"  target="_blank">
+	    <img src="/Images/gmail.png" height=50 width=50 /> 
+	    </a>
+	  Palm Desert High School
+
+	</p>
+</footer>
+</div>
+</html>

@@ -14,7 +14,7 @@
         <button type="button" onclick=clkme()>Monkey</button>
         <p id="monkeytime">🌳</p>
         
-        <button type="butto,mn" onclick=adder() >Adder</button>
+        <button type="button" onclick=adder() >Adder</button>
         
         <button type="button" onclick=adder2() >You stupid</button>
         <p id="addertime">What's 9+10</p>
@@ -27,11 +27,38 @@
  
          <button id="picButton" type="button" onclick=picChange()>proboscis be like</button>
  
+         <button id="showImg" type="button" onclick=showImg()>SHOW</button>
+         <button id="hideImg" type="button" onclick=hideImg()>HIDE</button>
         <script>
         
         var state = "minecraft"
         var pic = document.getElementById("graphic")
         var button = document.getElementById('picButton')
+        
+        var button2 = document.createElement("button")
+        var buttonText = document.createTextNode("Clicker")
+        button2.appendChild(buttonText)
+        button2.setAttribute("onclick", "picChange()")
+        button2.setAttribute("id", "bubblegum")
+
+        document.body.appendChild(button2)
+
+        var moonkas = document.createElement("button")
+        var buttonText = document.createTextNode("moonkas do adds sunglasses emoji")
+        moonkas.appendChild(buttonText)
+        moonkas.setAttribute("onclick", "adder()")
+        moonkas.setAttribute("id", "bubblegum2")
+        
+        document.body.appendChild(moonkas)
+
+        function hideImg(){
+         pic.style.display = "none"   
+            
+        }
+        
+        function showImg(){
+         pic.style.display = "block"   
+        }
         
         function picChange(){
 
